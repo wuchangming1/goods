@@ -30,7 +30,20 @@ public class BookDao {
             }
 
         }
+        System.out.println(whereSql);
+        System.out.println(params);
         return null;
+
+    }
+
+    public static void main(String[] args) {
+        List<Expression> expressions = new ArrayList<>();
+        expressions.add(new Expression("bname","=","java"));
+        expressions.add(new Expression("bid","is null",""));
+        expressions.add(new Expression("image_w","=","....."));
+        BookDao dao = new BookDao();
+        dao.findByCriteria(expressions,10);
+
 
     }
 }
