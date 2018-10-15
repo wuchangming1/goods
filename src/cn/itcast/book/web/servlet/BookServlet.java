@@ -16,6 +16,10 @@ import java.io.IOException;
 @WebServlet(name = "BookServlet",urlPatterns = "/BookServlet")
 public class BookServlet extends BaseServlet {
     private BookService bookService = new BookService();
+    public String findByCriteria(HttpServletRequest request,HttpServletResponse response){
+
+        return "f:/jsps/book/list.jsp";
+    }
 
 
 }

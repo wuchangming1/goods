@@ -10,7 +10,7 @@ public class PageBean <T>{
     private int pageSize;
     private int totalRecord;
     private String url;
-    private List<T> beabList;
+    private List<T> beanList;
 
     public int getTotalPage(){
         int totalPage = totalRecord/pageSize;
@@ -47,11 +47,11 @@ public class PageBean <T>{
         this.url = url;
     }
 
-    public List<T> getBeabList() {
-        return beabList;
+    public List<T> getBeanList() {
+        return beanList;
     }
 
-    public void setBeabList(List<T> beabList) {
-        this.beabList = beabList;
+    public void setBeanList(List<T> beanList) {
+        this.beanList = beanList;
     }
 }
