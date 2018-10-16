@@ -59,7 +59,7 @@ public class BookDao {
         List<Object> params = new ArrayList<>();
         StringBuffer whereSql = new StringBuffer(" where 1=1 ");
         for (Expression expression : expressionList) {
-            whereSql.append(" and ").append(expression.getName()).append(expression.getOperator());
+            whereSql.append(" and ").append(expression.getName()).append(" "+expression.getOperator());
             if (!expression.getOperator().equals("is null")){
 
                whereSql.append(" "+" ?");

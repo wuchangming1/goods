@@ -40,7 +40,7 @@
 		</c:url>
 		<c:url value="/BookServlet" var="pressUrl">
 		  <c:param name="method" value="findByPress"></c:param>
-		  <c:param name="press" value="${press}"></c:param>
+		  <c:param name="press" value="${book.press}"></c:param>
 		</c:url>
 		<p><a id="bookname" title="${book.bname}" href="<c:url value='/jsps/book/desc.jsp'/>">${book.bname}</a></p>
 		<p><a href="${authorUrl}" name='P_zz' title='${book.author}'>${book.author}</a></p>
