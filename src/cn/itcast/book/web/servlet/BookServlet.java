@@ -29,8 +29,10 @@ public class BookServlet extends BaseServlet {
 
     private String getUrl(HttpServletRequest request){
         String url = request.getRequestURI()+"?"+request.getQueryString();
-        int index = url.lastIndexOf("&pc");
-        url = url.substring(0,index);
+        int index = url.lastIndexOf("&pageCode");
+        if(index != -1) {
+            url = url.substring(0, index);
+        }
         return url;
     }
     public String findByCriteria(HttpServletRequest request,HttpServletResponse response){

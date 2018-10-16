@@ -59,10 +59,10 @@ public class BookDao {
         List<Object> params = new ArrayList<>();
         StringBuffer whereSql = new StringBuffer(" where 1=1 ");
         for (Expression expression : expressionList) {
-            whereSql.append(" and ").append(expression.getOperator());
+            whereSql.append(" and ").append(expression.getName()).append(expression.getOperator());
             if (!expression.getOperator().equals("is null")){
 
-               whereSql.append(" "+expression.getOperator()+" ?");
+               whereSql.append(" "+" ?");
                params.add(expression.getValue());
             }
 
@@ -80,6 +80,7 @@ public class BookDao {
         PageBean<Book> pageBean = new PageBean<>();
         pageBean.setPageCode(pageCode);
         pageBean.setPageSize(pageSize);
+        pageBean.setTotalRecord(number.intValue());
         pageBean.setBeanList(beanList);
 
 

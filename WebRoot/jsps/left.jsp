@@ -28,7 +28,7 @@ $(function() {
 	bar.config.radioButton=true;
 	<c:forEach items="${parents}" var="parent">
 		<c:forEach items="${parent.children}" var="child">
-    		bar.add("${parent.cname}", "${child.cname}", "/goods/jsps/book/list.jsp", "body");
+    		bar.add("${parent.cname}", "${child.cname}", "/goods/BookServlet?method=findByCriteria&cid=${child.cid}", "body");
 		</c:forEach>
 	</c:forEach>
 
