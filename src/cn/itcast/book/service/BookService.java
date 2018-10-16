@@ -35,5 +35,20 @@ public class BookService {
             throw new RuntimeException(e);
         }
     }
+    public PageBean<Book> findByCategory(String cid,int pageCode){
+        try {
+            return bookDao.findByCategory(cid,pageCode);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public PageBean<Book> findByCombination(Book criteria, int pc) {
+        try {
+            return bookDao.findByCombination(criteria, pc);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 }
